@@ -1,5 +1,6 @@
 import './App.css'
 import Profile from './Profile/Profile'
+// import userData from './userData.json'
 
 const userData = {
   username: "Jacques Gluke",
@@ -12,6 +13,7 @@ const userData = {
     likes: 1308
   }
 };
+
 
 const App = () => {
 
