@@ -1,26 +1,29 @@
-import { useState } from 'react'
 import './App.css'
+import Profile from './Profile/Profile'
 
-function App() {
-  const [count, setCount] = useState(0)
+const userData = {
+  username: "Jacques Gluke",
+  tag: "jgluke",
+  location: "Ocho Rios, Jamaica",
+  avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308
+  }
+};
+
+const App = () => {
 
   return (
     <>
-      <div>
-    
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Profile
+       name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
     </>
   )
 }
