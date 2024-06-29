@@ -3,7 +3,6 @@ import s from './FriendList.module.css';
 
 const FriendList = ({ friends }) => {
   return (
-    // <div className={s.FriendList}>
       <ul className={s.friends}>
             {friends.map(friend => {
             return (
@@ -16,7 +15,6 @@ const FriendList = ({ friends }) => {
                 );
             })}
         </ul>
-    // </div>
   );
 };
 export default FriendList;
