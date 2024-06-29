@@ -1,4 +1,4 @@
-// import clsx from 'clsx';
+
 import s from './Profile.module.css';
 
 const Profile = ({ name, tag, location, image, stats }) => {
@@ -12,11 +12,11 @@ const Profile = ({ name, tag, location, image, stats }) => {
                     />
                 </div>
                 <div>
-                    <p>{name}</p>
-                    <p>@{tag}</p>
-                    <p>{location}</p>
+                    <p className={s.name}>{name}</p>
+                    <p className={s.tag}>@{tag}</p>
+                    <p className={s.location}>{location}</p>
                 </div>
-                <ul>
+                <ul className={s.stats}>
                     <li>
                         <span>Followers</span>
                         <span>{stats.followers}</span>
