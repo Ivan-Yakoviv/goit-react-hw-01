@@ -1,24 +1,21 @@
 import './App.css'
 import Profile from './Profile/Profile'
 import userData from './userData.json'
-
-// const userData = {
-//   username: "Jacques Gluke",
-//   tag: "jgluke",
-//   location: "Ocho Rios, Jamaica",
-//   avatar: "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-//   stats: {
-//     followers: 5603,
-//     views: 4827,
-//     likes: 1308
-//   }
-// };
-
+import FriendList from './FriendList/FriendList'
+import friendList from './friendList.json'
 
 const App = () => {
 
   return (
-    <>
+    <div
+    style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+        color: '#010101',
+      }}>
       <Profile
        name={userData.username}
         tag={userData.tag}
@@ -26,7 +23,8 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-    </>
+      <FriendList friends={friendList} />
+    </div>
   )
 }
 
