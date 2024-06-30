@@ -1,4 +1,7 @@
 import s from './Profile.module.css';
+import { AiFillLike } from "react-icons/ai";
+import { FaEye } from "react-icons/fa";
+import { RiUserFollowFill } from "react-icons/ri";
 
 const Profile = ({ name, tag, location, image, stats }) => {
     return (
@@ -17,15 +20,15 @@ const Profile = ({ name, tag, location, image, stats }) => {
             <ul className={s.stats}>
                 <li className={s.item}>
                     <span className={s.label}>Followers</span>
-                    <span className={s.amount}>{stats.followers}</span>
+                    <span className={s.amount}><RiUserFollowFill />{stats.followers}</span>
                 </li>
                 <li className={s.item}>
                     <span className={s.label}>Views</span>
-                    <span className={s.amount}>{stats.views}</span>
+                    <span className={s.amount}><FaEye />{stats.views}</span>
                 </li>
                 <li className={s.item}>
                     <span className={s.label}>Likes</span>
-                    <span className={s.amount}>{stats.likes}</span>
+                    <span className={s.amount}><AiFillLike />{stats.likes}</span>
                 </li>
             </ul>
         </div>
